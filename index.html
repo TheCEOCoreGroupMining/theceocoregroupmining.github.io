@@ -18,14 +18,33 @@
       text-shadow: 1px 1px 3px #000;
     }
 
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 1em;
+    }
+
+    .logo {
+      width: 140px;
+      height: auto;
+    }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     h1 {
       font-size: 2.5em;
-      margin-bottom: 0.2em;
+      margin: 0;
     }
 
     h2 {
       font-size: 2em;
-      margin-top: 0;
+      margin-top: 0.2em;
       margin-bottom: 1em;
       color: #4de6a6;
     }
@@ -54,14 +73,23 @@
       text-decoration: underline;
     }
 
-    /* Mobile override for full image */
     @media (max-width: 768px) {
       body {
         background-size: cover;
       }
 
+      .header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .header-text {
+        align-items: center;
+      }
+
       h1, h2 {
         font-size: 1.5em;
+        text-align: center;
       }
 
       .coming-soon {
@@ -71,12 +99,22 @@
       p {
         font-size: 1em;
       }
+
+      .logo {
+        width: 120px;
+        margin-bottom: 0.5em;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to</h1>
-  <h2>Core Group Mining</h2>
+  <div class="header">
+    <img src="logo-dark.png" alt="Core Group Mining Logo" class="logo" />
+    <div class="header-text">
+      <h1>Welcome to</h1>
+      <h2>Core Group Mining</h2>
+    </div>
+  </div>
   <p>
     Built by miners, for miners, who believe we're building a decentralized future powered by Kaspa. 
     Proudly operated in the Pacific Northwest by miners who believe in freedom, transparency, and innovation.
