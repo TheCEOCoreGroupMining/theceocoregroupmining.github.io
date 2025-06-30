@@ -10,7 +10,8 @@
       padding: 1em;
       font-family: Arial, sans-serif;
       background: url("kaspa-bg.png") no-repeat center center fixed;
-      background-size: cover;
+      background-size: contain;
+      background-repeat: no-repeat;
       background-color: #000;
       color: #ffffff;
       text-align: center;
@@ -53,7 +54,12 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 600px) {
+    /* Mobile override for full image */
+    @media (max-width: 768px) {
+      body {
+        background-size: cover;
+      }
+
       h1, h2 {
         font-size: 1.5em;
       }
@@ -64,10 +70,6 @@
 
       p {
         font-size: 1em;
-      }
-
-      body {
-        background-size: cover;
       }
     }
   </style>
