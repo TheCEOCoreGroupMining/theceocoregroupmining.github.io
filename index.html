@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      padding: 1em;
+      padding: 0;
       font-family: Arial, sans-serif;
       background: url("kaspa-bg.png") no-repeat center center fixed;
       background-size: contain;
@@ -16,19 +16,27 @@
       color: #ffffff;
       text-align: center;
       text-shadow: 1px 1px 3px #000;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .content {
+      padding: 1.5em;
+      flex: 1;
     }
 
     .header {
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-wrap: nowrap;
       gap: 1em;
+      margin-bottom: 1em;
     }
 
     .logo {
-      height: 90px;
-      width: auto;
+      width: 160px;
+      height: auto;
     }
 
     .header-text {
@@ -38,29 +46,34 @@
     }
 
     h1 {
-      font-size: 2.0em;
+      font-size: 2.2em;
       margin: 0;
     }
 
     h2 {
       font-size: 2em;
       margin-top: 0.2em;
-      margin-bottom: 1em;
+      margin-bottom: 0.5em;
       color: #4de6a6;
     }
 
     p {
       font-size: 1.15em;
       max-width: 90%;
-      margin: 0 auto 0.5em auto;
+      margin: 0 auto 0.75em auto;
       line-height: 1.5;
     }
 
     .coming-soon {
       font-size: 1.4em;
       color: #ffd700;
-      margin-top: 1em;
+      margin-top: 1.5em;
       margin-bottom: 1em;
+    }
+
+    .footer {
+      background-color: #000;
+      padding: 1em 0 2em 0;
     }
 
     a {
@@ -101,33 +114,35 @@
       }
 
       .logo {
-        height: 60px;
+        width: 140px;
         margin-bottom: 0.5em;
       }
     }
   </style>
 </head>
 <body>
-  <div class="header">
-    <img src="logo-dark.png" alt="Core Group Mining Logo" class="logo" />
-    <div class="header-text">
-      <h1>Welcome to</h1>
-      <h2>Core Group Mining</h2>
+  <div class="content">
+    <div class="header">
+      <img src="logo-dark.png" alt="Core Group Mining Logo" class="logo" />
+      <div class="header-text">
+        <h1>Welcome to</h1>
+        <h2>Core Group Mining</h2>
+      </div>
     </div>
+    <p>
+      Built by miners, for miners, who believe we're building a decentralized future powered by Kaspa. 
+      Proudly operated in the Pacific Northwest by miners who believe in freedom, transparency, and innovation.
+    </p>
+    <p>
+      Core Group Mining is a fully independent Kaspa node powered by renewable hydropower.
+    </p>
+    <p>
+      We support miners of all sizes from pool, to solo home rigs, to industrial clusters—with low latency, full transparency, and zero interference.
+    </p>
+    <p class="coming-soon">The Northwest's fastest Kaspa 10bps Node, is Coming Soon!</p>
   </div>
-  <p>
-    Built by miners, for miners, who believe we're building a decentralized future powered by Kaspa. 
-    Proudly operated in the Pacific Northwest by miners who believe in freedom, transparency, and innovation.
-  </p>
-  <p>
-    Core Group Mining is a fully independent Kaspa node powered by renewable hydropower.
-  </p>
-  <p>
-    We support miners of all sizes from pool, to solo home rigs, to industrial clusters—with low latency, full transparency, and zero interference.
-  </p>
-  <p class="coming-soon">The Northwest's fastest Kaspa 10bps Node, is Coming Soon!</p>
-  <p>
-    Questions? <a href="mailto:info@coregroupmining.com">info@coregroupmining.com</a>
-  </p>
+  <div class="footer">
+    <p>Questions? <a href="mailto:info@coregroupmining.com">info@coregroupmining.com</a></p>
+  </div>
 </body>
 </html>
